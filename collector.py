@@ -9,7 +9,7 @@ from lxml import etree
 
 
 def curl(url):
-    cmd = ['curl', '--connect-timeout', '8', '-m', '8', url]
+    cmd = ['curl', '--connect-timeout', '8', '-m', '8', url,"--user-agent","Mozilla"]
     getit = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     timer = Timer(8, lambda process: process.kill(), [getit])
     try:
