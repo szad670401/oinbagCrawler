@@ -65,8 +65,8 @@ def main(time_flag):
             if img1_name[i] not in  previous:
                 image_url = img1[i][:-30]
                 image_url = image_url[:image_url.find("x-oss")-1]
-                download("./plates/"+'_'+str(i)+"_"+img1_name[i].encode('gb2312')+'.jpg',image_url )
-                logging.critical('download '+img1_name[i].encode('gb2312')+'_'+str(i)+'.jpg')
+                download("./plates/"+'_'+str(i)+"_"+img1_name[i].encode('utf-8')+'.jpg',image_url )
+                logging.critical('download '+img1_name[i].encode('utf-8')+'_'+str(i)+'.jpg')
         previous = img1_name
         return starttime
     else:
